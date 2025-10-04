@@ -329,7 +329,7 @@ def _patch_schema(dist_packages_dir):
     from urllib import request
 
     # Download file if it doesn't exist
-    patch_url = 'https://raw.githubusercontent.com/ceos-seo/odc-colab/master/patches/schema.diff'
+    patch_url = 'https://github.com/zekuwany/odc-colab/blob/master/patches/schema.diff'
     patch_file = f'./{patch_url.split("/")[-1]}'
     dummy_response = SimpleNamespace(code=0)
     resp = request.urlopen(patch_url) if not Path(patch_file).exists() else dummy_response
@@ -358,7 +358,7 @@ def _combine_split_files(path):
 
 def _download_db(*args, **kwargs):
     from urllib import request
-    url = 'https://raw.githubusercontent.com/ceos-seo/odc-colab/master/database/db_dump.tar.xz'
+    url = 'https://github.com/zekuwany/odc-colab/raw/refs/heads/master/database/db_dump.tar.xz'
     print('No database file supplied. Downloading default index.')
     resp = request.urlopen(url)
     if resp.code < 300:
