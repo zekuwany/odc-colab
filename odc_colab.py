@@ -286,7 +286,7 @@ More information on ODC environment configuration can be found at:
 
     if install_ceos_utils:
         _check_git_install('utils',
-                           'https://github.com/ceos-seo/data_cube_utilities.git',
+                           'https://github.com/zekuwany/data_cube_utilities.git',
                            verbose=verbose)
         _pip_install('xarray==2022.3.0', '--upgrade', verbose=verbose)
         _shell_cmd(['mkdir', '-p', '/content/output'])
